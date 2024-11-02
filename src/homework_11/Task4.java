@@ -97,4 +97,4 @@ public class Task4 {
 
         return result;
     }
-} // End class
+} // End class // Todo удаляет заданое число из массива

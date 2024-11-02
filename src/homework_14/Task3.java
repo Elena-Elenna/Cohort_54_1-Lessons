@@ -20,8 +20,11 @@ public class Task3 {
         for (int i = 0; i < str.length(); i++){
             char a = str.charAt(i);
 
-            if (Character.isLetter(a)){
-                if (vowels1.indexOf(a) != -1){
+            if (Character.isLetter(a)){ // Проверяем что символ является буквой
+                if (vowels1.indexOf(a) >= 0 ){ // Определяем какая это буква
+                    // возвращаем индекс вхождения символа в строку
+                    //если символ найден - то ветрнется индекс символа в строке
+                    //если символ не найден - метод вернет -1.
                     vowels++;
                 } else {
                     consonants++;
@@ -32,4 +35,4 @@ public class Task3 {
         System.out.println("Согласные: " + consonants);
 
     }
-}
+} // Todo Подсчет гласных и согласных

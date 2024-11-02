@@ -90,7 +90,7 @@ public class Task2 {
         }
         return null;
     }
-}
+} //TODO самая короткая и самая длинная строка массива.
 
 
 

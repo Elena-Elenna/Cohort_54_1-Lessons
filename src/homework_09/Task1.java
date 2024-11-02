@@ -118,4 +118,4 @@ public class Task1 {
         }
     }
 
-}// End class
+}// End class // TODO все врианты распечатывания массива

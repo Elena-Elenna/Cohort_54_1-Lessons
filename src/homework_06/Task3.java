@@ -38,4 +38,4 @@ public class Task3 {
                 input, isEven, isDevByThree, isTwice);
 
     }
-}
+} // TODO четное, кратное, четное и кратное число

@@ -21,8 +21,8 @@ public class Task3_3 {
         char a;
         for (int i = 0; i < strin.length(); i++){
             a = strin.toLowerCase().charAt(i);
-            if (vowel.indexOf(a) != -1) vowel1++;
-            if (consonant.indexOf(a) != -1) consonant1++;
+            if (vowel.indexOf(a) >= 0) vowel1++;
+            if (consonant.indexOf(a) >= 0) consonant1++;
         }
         System.out.println("Гласные: " + vowel1);
         System.out.println("Согласные: " + consonant1);

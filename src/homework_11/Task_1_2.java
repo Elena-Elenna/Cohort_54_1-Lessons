@@ -73,4 +73,4 @@ public static double averageArray(int[] arr) {
 
 
 
-} // End class
+} // End class //Todo сумма и среднее арифметическое в массиве

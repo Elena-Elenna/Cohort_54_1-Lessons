@@ -70,7 +70,7 @@ public class Task1 {
             System.out.print(array[i] + ", ");
         }
     }
-}
+} //TODO копирование массива
 
 
 

@@ -50,6 +50,6 @@ public class Task3 {
         }
         return true; // Если делителей нет, число простое
     }
-}
+} //TODO Random и простые числа
 
 

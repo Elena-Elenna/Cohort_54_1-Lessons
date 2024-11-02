@@ -84,6 +84,6 @@ public class Task3 {
         System.out.println();
         return true;
     }
-}
+} // TODO Метод возвращает массив, состоящий только из простых чисел
 
 
