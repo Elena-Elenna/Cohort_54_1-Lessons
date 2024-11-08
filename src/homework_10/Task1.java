@@ -46,8 +46,6 @@ public class Task1 {
             System.out.print(newArray[i] + (i < newArray.length - 1 ? ", " : "]\n"));
         }
     }
-    //Todo использование тернарного оператора
-
     //  +++++++++++++++++++++++++++++++++++++++++++++++++++++
     public static void copyOfArra (int[] array, int newLength) {
         if (array == null) {
@@ -70,7 +68,7 @@ public class Task1 {
             System.out.print(array[i] + ", ");
         }
     }
-} //TODO копирование массива
+}
 
 
 

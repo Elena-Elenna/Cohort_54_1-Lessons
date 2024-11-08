@@ -30,7 +30,6 @@ public class Task3 {
         System.out.println("discountMoney: " + discountMoney);
         System.out.println("priceWithDiscount: " + priceWithDiscount);
 
-        //Todo Как прощитать скидку (10%)
         double priceWithDiscount2 = (priceA + priceB) * (100 - discount) / 100;
         System.out.println("priceWithDiscount2: " + priceWithDiscount2);
 

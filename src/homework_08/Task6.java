@@ -87,7 +87,5 @@ public class Task6 {
         System.out.println("max1: " + max1);
         System.out.println("sum1: " + sum1);
         System.out.println("average: " + sum1 / (double) array1.length);
-
-        //Todo минимальное, максимальное, среднее арифметическое в массиве
     }
 }

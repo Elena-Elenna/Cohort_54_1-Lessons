@@ -117,5 +117,4 @@ public class Task1 {
             System.out.print(arr[i] + (i != index ? ", " : "]\n"));
         }
     }
-
-}// End class // TODO все врианты распечатывания массива
+}// End class

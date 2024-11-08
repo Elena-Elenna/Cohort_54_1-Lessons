@@ -37,4 +37,4 @@ public class Task_3 {
 
         return true;
     }
-} //Todo массив палиндром
+}

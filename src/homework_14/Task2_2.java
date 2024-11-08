@@ -32,4 +32,4 @@ public class Task2_2 {
         }
         return secondMax;
     }
-} //End clas // Todo Найти второе по величине число в массиве
+} //End clas

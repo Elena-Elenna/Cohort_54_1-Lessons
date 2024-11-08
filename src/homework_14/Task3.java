@@ -35,4 +35,4 @@ public class Task3 {
         System.out.println("Согласные: " + consonants);
 
     }
-} // Todo Подсчет гласных и согласных
+}

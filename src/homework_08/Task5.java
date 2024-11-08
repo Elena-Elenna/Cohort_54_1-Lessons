@@ -56,8 +56,5 @@ public class Task5 {
             len--;
         }
         System.out.println(" = " + sum2);
-
-        //Todo Нахождение степени числа с помощью (int) Math.pow
-
     }
 }
