@@ -1,15 +1,15 @@
-package lesson_17;
+package homework_17;
 
-public class MagicArray17 {
-    int[] array;
-    int cursor; // присвоено значение по умолчание - 0;
+public class MagicArrayHW17 {
+    private int[] array;
+    private int cursor; // присвоено значение по умолчание - 0;
 
-    public MagicArray17() {
+    public MagicArrayHW17() {
         array = new int[10];
     }
 
-    public MagicArray17(int[] ints){
-        if (ints != null){
+    public MagicArrayHW17(int[] ints) {
+        if (ints != null) {
             this.array = new int[ints.length * 2];
             addAll(ints);
         } else {
@@ -18,9 +18,9 @@ public class MagicArray17 {
     }
 
     // Добавление в массив одного элемента
-    void add(int value) {
+    public void add(int value) {
         if (cursor == array.length - 1) {         // Курсор указывает на последнюю свободную ячейку
-                                                  // Проверка. Есть ли свободное места во внутреннем массиве
+                                                // Проверка. Есть ли свободное места во внутреннем массиве
             expandArray();                        // Если места нет - нужно добавить место
         }                                         // Расширить массив перед добавлением нового элемента
         array[cursor] = value;
@@ -28,7 +28,7 @@ public class MagicArray17 {
     }
 
     // Динамическое расширение массива
-    void expandArray() {
+    public void expandArray() {
         System.out.println("Расширяем массив! cursor: " + cursor);
         int[] newArray = new int[array.length * 2];  // 1.Создать массив большего размера (в 2 раза больше)
         for (int i = 0; i < cursor; i++) {           // 2.Переписать в новый массив все значения из старого (до курсора)
@@ -39,7 +39,7 @@ public class MagicArray17 {
     }
 
     // Добавление в массив нескольких элементов
-    void addAll(int... values) {
+    public void addAll(int... values) {
         //System.out.println("Мы приняли несколько int-ов. А именно: " + values.length);
         // System.out.println("У каждого значения есть индекс. По индексом 0: " + values[0]);
         for (int i = 0; i < values.length; i++) {
@@ -48,12 +48,12 @@ public class MagicArray17 {
     }
 
     // Удаление элемента по индексу
-    int remove(int index) {
+    public int remove(int index) {
         if (index < 0 || index >= cursor) {  //1.Проверить валидность индекса (что он не отрицательный и меньше курсора)
             return Integer.MIN_VALUE;                 // Индекс не валидный. Ничего в массиве не трогаем
         } // Todo поправить обработку не корректного индекса
         int value = array[index];                      // 2.Запомнить, какое значение находилось под этим индексом
-        for (int i = index; i <  cursor - 1; i++) {    //3.Удалить значение из ячейки
+        for (int i = index; i < cursor - 1; i++) {    //3.Удалить значение из ячейки
             array[i] = array[i + 1];                   //4.Передвинуть все элементы за индексом на 1 ячейку влево
         }
         cursor--;                                      //5. Передвинуть курсор влево
@@ -61,7 +61,7 @@ public class MagicArray17 {
     }
 
     // Текущее количество элементов в массиве
-    int size() {
+    public int size() {
         return cursor;
     }
 
@@ -71,20 +71,31 @@ public class MagicArray17 {
         String result = "[";                       //Открыть скобочку.
         for (int i = 0; i < cursor; i++) {        //Перебрать элементы.
             result = result + array[i] + ((i < cursor - 1) ? ", " : "]");
-                                                 //Добавить каждый элемент, добавить запятую (если элемент не последний)
+            //Добавить каждый элемент, добавить запятую (если элемент не последний)
         }                                         //Закрыть скобочку
         return result;
     }
 
-    //Поиск элемента по значению indexOf -(вернуть индекс, если такое значение есть в массиве)
+    //Поиск элемента по значению indexOf - находит индекс первого вхождения
     public int indexOf(int value) {
         for (int i = 0; i < cursor; i++) {
             if (array[i] == value) {
+                return i;                     // (вернуть индекс, если такое значение есть в массиве)
+            }
+        }
+        return -1;
+    }
+
+    //Поиск элемента по значению lastIndexOf - находит индекс последнего вхождения
+    public int lastIndexOf(int value){
+        for (int i = cursor - 1; i >= 0; i--){
+            if (array[i] == value){
                 return i;
             }
         }
         return -1;
     }
+
 
     //Возвращение значения по индексу
     public int get(int index) {
@@ -92,6 +103,18 @@ public class MagicArray17 {
             return array[index];
         }
         return Integer.MIN_VALUE;  //TODO поправить обработку не корректного индекса
+    }
+
+    //Метод, который возвращает все значения в виде обычного массива
+    public int[] toArray() {
+        int[] newArr = new int[cursor];
+        if (array == null || array.length == 0){
+           return null; //TODO HW
+        }
+        for (int i = 0; i < cursor; i++) {
+            newArr[i] = array[i];
+        }
+        return newArr;
     }
 
     //Удаление элемента по значению
@@ -105,9 +128,9 @@ public class MagicArray17 {
     }
 
     //Замена значения по индексу (есть индекс и новое значение) - возвращает старое значение
-    public int set(int index, int newValue){
+    public int set(int index, int newValue) {
 
-        if (index < 0 || index >= cursor){               //Валидация индекса 0....cursor
+        if (index < 0 || index >= cursor) {               //Валидация индекса 0....cursor
             return Integer.MIN_VALUE;
             // TODO поправить обработку не корректного  индекса
         }
