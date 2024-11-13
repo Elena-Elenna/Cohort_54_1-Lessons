@@ -1,4 +1,11 @@
 package homework_17;
+/*
+Task 0
+Написать класс Employee (Работник)
+У него должны быть поля имя, возраст, зарплата
+Инкапсулировать класс.
+Написать метод info() выводящий информацию о работнике.
+ */
 
 public class Employee {
     private String name;
@@ -24,7 +31,7 @@ public class Employee {
     }
 
     public void setAge(int age) {
-        if (age >= 0 && age < 110){
+        if (age >= 0 && age < 100){
         this.age = age;
         }
     }
@@ -38,6 +45,6 @@ public class Employee {
         }
     }
     public void info(){
-        System.out.printf("Я %s, мой возвраст: %d, моя зарплата: %.3f", name, age, salary);
+        System.out.printf("Я %s, мой возвраст: %d, моя зарплата: %.2f", name, age, salary);
      }
 }

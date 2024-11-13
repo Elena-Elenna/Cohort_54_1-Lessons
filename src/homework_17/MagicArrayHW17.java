@@ -4,6 +4,8 @@ public class MagicArrayHW17 {
     private int[] array;
     private int cursor; // присвоено значение по умолчание - 0;
 
+
+
     public MagicArrayHW17() {
         array = new int[10];
     }
@@ -17,6 +19,8 @@ public class MagicArrayHW17 {
         }
     }
 
+
+
     // Добавление в массив одного элемента
     public void add(int value) {
         if (cursor == array.length - 1) {         // Курсор указывает на последнюю свободную ячейку
@@ -28,7 +32,7 @@ public class MagicArrayHW17 {
     }
 
     // Динамическое расширение массива
-    public void expandArray() {
+    private void expandArray() {
         System.out.println("Расширяем массив! cursor: " + cursor);
         int[] newArray = new int[array.length * 2];  // 1.Создать массив большего размера (в 2 раза больше)
         for (int i = 0; i < cursor; i++) {           // 2.Переписать в новый массив все значения из старого (до курсора)
@@ -108,9 +112,6 @@ public class MagicArrayHW17 {
     //Метод, который возвращает все значения в виде обычного массива
     public int[] toArray() {
         int[] newArr = new int[cursor];
-        if (array == null || array.length == 0){
-           return null; //TODO HW
-        }
         for (int i = 0; i < cursor; i++) {
             newArr[i] = array[i];
         }
@@ -138,8 +139,6 @@ public class MagicArrayHW17 {
         array[index] = newValue;                         //Записать новое значение
         return oldValue;                                 //Вернуть старое значение
     }
-
-
 }
 
 /*
@@ -156,9 +155,9 @@ public class MagicArrayHW17 {
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-10. Поиск последнего вхождения по значению lastIndexOf -- HW
-11. Замена значения по индексу (есть индекс и новое значение) - возвращает старое значение
-12. Конструктор, который принимает обычный массив и создает MagicArray с такими же значениями
-13. Метод, который возвращает все значения в виде обычного массива -- HW
+10. Поиск последнего вхождения по значению lastIndexOf ++
+11. Замена значения по индексу (есть индекс и новое значение) - возвращает старое значение++
+12. Конструктор, который принимает обычный массив и создает MagicArray с такими же значениями++
+13. Метод, который возвращает все значения в виде обычного массива ++
  */
 
