@@ -32,7 +32,7 @@ public class Calculator {
     public static int divide(int a, int b){
         if (b == 0) return Integer.MIN_VALUE;
         return a / b;
-    }
+    } // Todo поправить обработку не корректного индекса
 
     public static double add(double a, double b){
         return a + b;
@@ -46,8 +46,8 @@ public class Calculator {
         return a * b;
     }
 
-    public static double divide(double a, double b){
-        return a / b;
-    }
 
+    public static double divide(double a, double b){
+        return a/b;
+    }
 }
