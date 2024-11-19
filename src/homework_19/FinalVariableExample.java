@@ -11,7 +11,7 @@ public class FinalVariableExample {
 
     public static void main(String[] args) {
         final int MAX_USERS = 100;
-        System.out.println("Initial MAX_USERS: " + MAX_USERS);
+        System.out.println("Инициализация MAX_USERS: " + MAX_USERS);
 
 //       MAX_USERS = 200; // Эта строка вызовет ошибку компиляции (не возможно присвоить значение конечной переменной)
 

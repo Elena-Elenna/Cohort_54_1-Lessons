@@ -44,16 +44,16 @@ public class ImmutablePoint {
     }
 
     public static void main(String[] args) {
-        ImmutablePoint point = new ImmutablePoint(15, 25);
-        System.out.println(point);
+        ImmutablePoint a = new ImmutablePoint(15, 25);
+        System.out.println(a);
 
 
-//         point.setX(30); // Ошибка: не возможно присвоить значение конечной переменной
-//         point.setY(40);
+//         a.setX(30); // Ошибка: не возможно присвоить значение конечной переменной
+//         a.setY(40);
 
 
-        System.out.println("X: " + point.getX());
-        System.out.println("Y: " + point.getY());
+        System.out.println("X: " + a.getX());
+        System.out.println("Y: " + a.getY());
     }
 
 }
