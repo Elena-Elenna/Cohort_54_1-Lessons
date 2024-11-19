@@ -8,6 +8,8 @@ public class StringBuilderExample {
         //Это спец.класс, предназначеный для эффективного создания и модификации изменяемых последовательностей символов
         //В отличии от класса String объекты String Builder могут изменяться без создания новых объектов в памяти,
         //что повышает производительность при частых операциях со строками
+        // Имеет брата StringBuffer, в котором все методы работают так же, но немного медленее.
+        // StringBuffer - потоко-безопасный.
         String str = "Java" + " " + "is" + " " + "the" + " " + "best";
         System.out.println(str);
 
@@ -86,6 +88,38 @@ public class StringBuilderExample {
         // split - обратный процес join (можно с его помощью из предложения сделать массив строк из слов)
         String[] strings = exampl.split(" ");
         System.out.println(Arrays.toString(strings));
+
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        /*
+        Написать метод, который запрашивает у пользователя строку, состоящую из нескольких слов
+        и возвращающий аббревиатуру этой фразы (первые буквы каждого слова, записанные в верхнем регистре)
+        Привет Джава разработчикам -> ПДР
+        Использовать StringBuilder
+         */
+
+        String result = pharseString();
+        System.out.println(result);
     }
-    
+
+    private static String pharseString() {
+        /*
+        1. Запросить у пользователя строку
+        2. Разбить строку на массив слов
+        3. Перебрать все слова в цикле
+        4. Из каждого слова взять первую букву, приклеить ее к результату
+        5. Когда все слова перебрали - получить строку, привести ее к верхнему регистру -> вернуть
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите строку, состоящую из нескольких слов");
+        String input = scanner.nextLine();
+        StringBuilder sb = new StringBuilder();
+        // String result = "";
+        String[] words = input.split(" ");
+        for (int i = 0; i < words.length; i++) {
+            String word = words[i];
+            sb.append(word.charAt(0));
+            // result = result + word.charAt(0);
+        }
+        return sb.toString().toUpperCase();
+    }
 }
