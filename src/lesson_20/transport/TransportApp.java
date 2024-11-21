@@ -1,8 +1,4 @@
-package lesson_20;
-
-import lesson_20.transport.Bus;
-import lesson_20.transport.InternationalBus;
-import lesson_20.transport.Train;
+package lesson_20.transport;
 
 public class TransportApp {
     public static void main(String[] args) {
@@ -33,21 +29,21 @@ public class TransportApp {
         System.out.println("++++++++++++++++++++++++++");
 
         Bus bus1 = new Bus("Bus B-2",  3, 2024);
-        System.out.println(bus1.takePasstngers());
+        System.out.println(bus1.takePassengers());
         System.out.println("2=========");
-        System.out.println(bus1.takePasstngers());
+        System.out.println(bus1.takePassengers());
         System.out.println("3=========");
-        System.out.println(bus1.takePasstngers());
+        System.out.println(bus1.takePassengers());
         System.out.println("4=========");
-        System.out.println(bus1.takePasstngers());
+        System.out.println(bus1.takePassengers());
 
-        System.out.println("count: " + bus1.getCountPassengerrs());
+        System.out.println("count: " + bus1.getCountPassengers());
 
         System.out.println("1. " + bus1.dropPassengers());
         System.out.println("2. " + bus1.dropPassengers());
         System.out.println("3. " + bus1.dropPassengers());
         System.out.println("4. " + bus1.dropPassengers());
-        System.out.println("count: " + bus1.getCountPassengerrs());
+        System.out.println("count: " + bus1.getCountPassengers());
 
         System.out.println("\n++++++++++++++++++++++++\n");
 
@@ -59,7 +55,7 @@ public class TransportApp {
                 new String[] {"Italy", "France", "Spain", "Monaco"});
 
         System.out.println("year: " + internationalBus.getYear()); //метод и поле Vehicle
-        System.out.println("take Pass: " + internationalBus.takePasstngers());//метод из Bus
+        System.out.println("take Pass: " + internationalBus.takePassengers());//метод из Bus
         System.out.println("toString: " + internationalBus.toString()); //метод из Vehicle
         System.out.println("capacity: " + internationalBus.getCapacity()); // метод и поле из Bus
         internationalBus.goToRoute(); // метод из InternationalBus

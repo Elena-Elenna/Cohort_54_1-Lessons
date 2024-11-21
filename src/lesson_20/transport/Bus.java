@@ -9,7 +9,7 @@ public class Bus extends Vehicle {
      */
 
     private int capacity; // вместимость
-    private int countPassengerrs; // сколько сейчас пассажиров в автобусе
+    private int countPassengers; // сколько сейчас пассажиров в автобусе
 
     public Bus(String model, int capacity, int year){
         // Нужно сначала создать объект родителя
@@ -22,27 +22,27 @@ public class Bus extends Vehicle {
         return capacity;
     }
 
-    public int getCountPassengerrs() {
-        return countPassengerrs;
+    public int getCountPassengers() {
+        return countPassengers;
     }
 
     // Взять на борт одного пассажира
-    public boolean takePasstngers(){
-        if(countPassengerrs < capacity){ // проверка - есть ли свободное место
-            countPassengerrs++;
+    public boolean takePassengers(){
+        if(countPassengers < capacity){ // проверка - есть ли свободное место
+            countPassengers++;
             System.out.println("Пассажир зашел в автобус: " + model);
             return  true;
         }
         // по сути пишу блок else
         System.out.printf("В автобусе %s больше нет мест. Сейчас %d пассажиров\n",
-                this.getModel(), countPassengerrs);
+                this.getModel(), countPassengers);
         return false;
     }
 
     //высадка пассажира из автобуса
     public boolean dropPassengers(){
-        if (countPassengerrs > 0){ //проверка - есть ли в автобусе пассажиры
-            countPassengerrs--;
+        if (countPassengers > 0){ //проверка - есть ли в автобусе пассажиры
+            countPassengers--;
             System.out.println("Пассажир вышел из автобуса" + model);
             return true;
         }

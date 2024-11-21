@@ -15,7 +15,7 @@ public class PersonsApp {
 
         System.out.println("================================");
         System.out.println(people[0].toString());
-        System.out.println("people[0].getName: " + people[0].getName());
+        System.out.println("people[0].getModel: " + people[0].getName());
 
         people[0].setName("Peter");
         System.out.println("people[0]:" + people[0].toString());
@@ -25,7 +25,7 @@ public class PersonsApp {
         for (int i =0; i < people.length; i++){
             if (people[i] != null) {
                 System.out.println(people[i].toString());
-                System.out.println("people[1].getName" + people[1].getName());
+                System.out.println("people[1].getModel" + people[1].getName());
             } else {
                 System.out.println("people[" + i + "] is null");
             }

@@ -25,23 +25,13 @@ public class Vehicle {
         System.out.println("останавливается: " + model);
     }
 
-    public  String toString(){
-        return model + ", год выпуска: " + year;
-    }
+    public void setYear(int year) {this.year = year;}
 
-    public String getModel() {
-        return model;
-    }
+    public int getYear() {return year;}
 
-    public void setModel(String model) {
-        this.model = model;
-    }
+    public void setModel(String model) {this.model = model;}
 
-    public int getYear() {
-        return year;
-    }
+    public String getModel() {return model;}
 
-    public void setYear(int year) {
-        this.year = year;
-    }
+    public  String toString(){return model + ", год выпуска: " + year;}
 }
