@@ -20,24 +20,16 @@ public class Shape {
     }
 
     public void displayInfo() {
-        System.out.println("Фигура: " +name + "; Цвет: " + color);
-    }
+        System.out.println("Фигура: " + name + "; Цвет: " + color);}
 
-    public String getName() {
-        return this.name;
-    }
+    public String getName() {return this.name;}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setName(String name) {this.name = name;}
 
-    public String getColor() {
-        return this.color;
-    }
+    public String getColor() {return this.color;}
 
     public void setColor(String color) {
         this.color = color;
-
         displayInfo();
     }
 }

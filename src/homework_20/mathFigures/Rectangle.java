@@ -18,6 +18,9 @@ public class Rectangle extends Shape{
         calculateArea();
     }
 
+    public Rectangle(String name, String color) {
+        super(name, color);
+    }
 
 
     public void setDimensions(double width, double height){

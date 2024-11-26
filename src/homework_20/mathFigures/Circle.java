@@ -16,6 +16,11 @@ public class Circle extends Shape{
         calculateArea();
     }
 
+    public Circle(String name, String color) {
+        super(name, color);
+    }
+
+
     public double calculateArea(){
         double area = Math.PI * radius * radius;
         System.out.println("Площадь круга: " + area);

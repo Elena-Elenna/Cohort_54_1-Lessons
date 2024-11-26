@@ -31,6 +31,5 @@ public class FiguresApp {
         circle.setRadius(0.25);
         System.out.println("Radius: " + circle.getRadius());
         circle.calculateArea();
-
     }
 }
