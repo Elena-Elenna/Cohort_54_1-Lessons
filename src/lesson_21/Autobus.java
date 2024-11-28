@@ -92,21 +92,74 @@ public class Autobus {
     [ 1, 2, 6, 78, 99] -> убрать с id 6 [1, 2, 78, 99]
     Уменьшить кол-во пассажиров
      */
-//TODO HW
-    public boolean dropPassenger(Passenger passenger) {
+//TODO HW переделать
+     public boolean dropPassenger(Passenger passenger) {
+        if (passenger == null) return false;
+        int index = findPassenger(passenger);
+        if (index == -1) {
+            // Пассажира нет в автобусе
+            System.out.printf("Пассажир с id: %d в автобусе не найден!\n", passenger.getId());
+            return false;
+        }
+        // Пассажир найден. Его нужно высадить = удалить из списка пассажиров
+        for (int i = index + 1; i < countPassengers; i++) {
+            passengers[i - 1] = passengers[i];
+        }
+        passengers[countPassengers -1] = null; // не обязательная строка
+        countPassengers--; // Уменьшаем кол-во пассажиров (заодно сдвигаем наш курсор)
+
+        System.out.printf("Пассажир %s с id: %d вышел из автобуса\n", passenger.getName(), passenger.getId());
+        return true;
+    }
+
+
+    private int findPassenger(Passenger passenger) {
         for (int i = 0; i < countPassengers; i++) {
             if (passengers[i].getId() == passenger.getId()) {
-                for (int j = i; j < countPassengers - 1; j++) {
-                    passengers[j] = passengers[j + 1];
-                }
-                countPassengers--;
-                System.out.printf("Пассажир id %d высажен из автобуса c id %d\n", passenger.getId(), this.id);
-                return true;
+                return i;
             }
         }
-        System.out.printf("Пассажир id %d не найден в автобусе c id %d\n", passenger.getId(), this.id);
-        return false;
+        return -1; // пассажир не найден. Возвращаем -1
     }
+
+    // Метод возвращающий список пассажиров
+    public String getPassengersList() {
+        /*
+        Перебрать всех пассажиров.
+        Склеить строку из пассажиров в едином виде (id + name)
+         */
+        StringBuilder sb = new StringBuilder("{");
+        for (int i = 0; i < countPassengers; i++) {
+            // Взять каждого пассажира и добавить инфо о нем
+            Passenger tempPass = passengers[i];
+            sb.append("Passenger: {id: ").append(tempPass.getId());
+            sb.append("; name: ").append(tempPass.getName()).append("}; ");
+        }
+
+        // Если пассажиров нет, я хочу чтоб вернулось "{}"
+//        System.out.println(sb.toString());
+        // Хочу убрать лишнюю "; " после последнего пассажира в списке
+        if (sb.length() > 1) {
+            sb.setLength(sb.length() - 2);
+        }
+        sb.append("}");
+        return sb.toString();
+    }
+
+//    public boolean dropPassenger(Passenger passenger) {
+//        for (int i = 0; i < countPassengers; i++) {
+//            if (passengers[i].getId() == passenger.getId()) {
+//                for (int j = i; j < countPassengers - 1; j++) {
+//                    passengers[j] = passengers[j + 1];
+//                }
+//                countPassengers--;
+//                System.out.printf("Пассажир id %d высажен из автобуса c id %d\n", passenger.getId(), this.id);
+//                return true;
+//            }
+//        }
+//        System.out.printf("Пассажир id %d не найден в автобусе c id %d\n", passenger.getId(), this.id);
+//        return false;
+//    }
 
 
     private boolean isPessengerInBus(Passenger passenger) {
