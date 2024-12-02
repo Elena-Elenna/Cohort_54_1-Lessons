@@ -3,14 +3,21 @@ package homework_22.people;
 public class App {
     public static void main(String[] args) {
         Human human = new Human();
+        AthleteAmateur amateur = new AthleteAmateur();
+
         human.run();
+        System.out.println("++++++++++++++");
 
-        AthleteAmateur athleteAmateur = new AthleteAmateur();
+        amateur.run();
+        System.out.println("============");
 
-        athleteAmateur.run();
 
-        ProfessionalAthlete professionalAthlete = new ProfessionalAthlete();
-        professionalAthlete.run();
+
+        ProfessionalAthlete prof = new ProfessionalAthlete();
+        prof.run();
+
+        ProfessionalAthlete prof2 = new ProfessionalAthlete(30,3);
+        prof2.run();
 
     }
 }

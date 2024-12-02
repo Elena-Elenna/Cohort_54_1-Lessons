@@ -10,7 +10,7 @@ Vehicle (родительский класс), Car, Bicycle и Motorcycle (до�
 Используйте полиморфизм для вызова метода startEngine() для каждого транспортного средства.
  */
 
-public class Vechikle {
+public class VechikleHW {
 
 
     public void startEngine() {

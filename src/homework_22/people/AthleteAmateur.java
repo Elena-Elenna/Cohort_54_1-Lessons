@@ -4,7 +4,11 @@ public class AthleteAmateur extends Human{
 
 
     public AthleteAmateur() {
-        setRunSpeed(15);
-        setRestTime(10);
+        super(15,10);
+        this.setTypeRunner("Любитель");
+    }
+
+    public AthleteAmateur(int runSpeed, int restTime) {
+        super(runSpeed, restTime);
     }
 }

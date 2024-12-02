@@ -1,20 +1,20 @@
 package homework_22.transport;
 
-public class App {
+public class AppHW {
     public static void main(String[] args) {
 
-        Car car = new Car();
+        CarHW car = new CarHW();
         car.startEngine();
-        Motorcycle motorcycle = new Motorcycle();
+        MotorcycleHW motorcycle = new MotorcycleHW();
         motorcycle.startEngine();
-        Bicycle bicycle = new Bicycle();
+        BicycleHW bicycle = new BicycleHW();
         bicycle.startEngine();
 
         System.out.println("========================");
-        Vechikle vechikle1 = new Car();
-        Vechikle vechikle2 = new Motorcycle();
-        Vechikle vechikle3 = new Bicycle();
-        Vechikle[] vechikle = new Vechikle[3];
+        VechikleHW vechikle1 = new CarHW();
+        VechikleHW vechikle2 = new MotorcycleHW();
+        VechikleHW vechikle3 = new BicycleHW();
+        VechikleHW[] vechikle = new VechikleHW[3];
         vechikle[0] = vechikle1;
         vechikle[1] = vechikle2;
         vechikle[2] = vechikle3;

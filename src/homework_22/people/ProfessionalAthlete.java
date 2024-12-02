@@ -2,8 +2,15 @@ package homework_22.people;
 
 public class ProfessionalAthlete extends AthleteAmateur {
 
+    {
+        this.setTypeRunner("Профессионал");
+    }
+
+    public ProfessionalAthlete(int runSpeed, int restTime) {
+        super(runSpeed, restTime);
+    }
+
     public ProfessionalAthlete() {
-        setRunSpeed(25);
-        setRestTime(5);
+        super(25,5);
     }
 }

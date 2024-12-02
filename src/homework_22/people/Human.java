@@ -11,8 +11,9 @@ Task 1
 
 public class Human {
 
-    private int runSpeed;
-    private int restTime;
+    private final int runSpeed;
+    private final int restTime;
+    private String typeRunner = "Человек";
 
 
     public Human() {
@@ -20,6 +21,10 @@ public class Human {
         this.restTime = 15;
     }
 
+    public Human(int runSpeed, int restTime) {
+        this.runSpeed = runSpeed;
+        this.restTime = restTime;
+    }
 
     public void rest(){
         System.out.printf("Человек отдыхает %d минут: \n", + restTime);
@@ -34,15 +39,24 @@ public class Human {
         return this.runSpeed;
     }
 
-    public void setRunSpeed(int runSpeed) {
-        this.runSpeed = runSpeed;
-    }
 
     public int getRestTime() {
         return this.restTime;
     }
 
-    public void setRestTime(int restTime) {
-        this.restTime = restTime;
+    public String getTypeRunner() {
+        return this.typeRunner;
+    }
+
+    public void setTypeRunner(String typeRunner) {
+        this.typeRunner = typeRunner;
+    }
+
+    @Override
+    public String toString() {
+        return "Human {" +
+                "runSpeed = " + runSpeed +
+                ", restTime = " + restTime +
+                '}';
     }
 }
