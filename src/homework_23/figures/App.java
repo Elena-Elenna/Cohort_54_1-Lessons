@@ -3,7 +3,7 @@ package homework_23.figures;
 public class App {
     public static void main(String[] args) {
 
-        Triangle triangle = new Triangle("Треугольник: ", 5, 5, 5);
+        Triangle triangle = new Triangle("Треугольник: ", 8, 5, 5);
         System.out.println(triangle);
 
         Rectangle rectangle = new Rectangle("Прямоугольник",10, 15);
@@ -34,5 +34,18 @@ public class App {
 
         System.out.printf("Сумма площадей фигур: %.1f\n", sumaArea);
         System.out.printf("Сумма периметров фигур: %.1f\n", sumaPerimeter);
+        System.out.println("+++++++++++++++++++++++++");
+
+//        TriangleSingle triangleSingle = TriangleSingle.getInstance();
+//        TriangleSingle triangleSingle2 = TriangleSingle.getInstance();
+//        System.out.println(triangleSingle == triangleSingle2);
+
+        TriangleSingle triangleSingle = TriangleSingle.getInstance(3, 4,8);
+        System.out.println(triangleSingle);
+        triangleSingle = TriangleSingle.getInstance(4, 6, 4);
+        System.out.println(triangleSingle.perimeter());
+        System.out.println(triangleSingle.area());
+        System.out.println(triangleSingle);
+
     }
 }

@@ -17,6 +17,8 @@ abstract class Shape {
         this.type = type;
     }
 
+    public Shape() {
+    }
 
     public abstract double area();
 

@@ -92,7 +92,7 @@ public class Autobus {
     [ 1, 2, 6, 78, 99] -> убрать с id 6 [1, 2, 78, 99]
     Уменьшить кол-во пассажиров
      */
-//TODO HW переделать
+
      public boolean dropPassenger(Passenger passenger) {
         if (passenger == null) return false;
         int index = findPassenger(passenger);

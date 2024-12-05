@@ -55,7 +55,7 @@ public class MagicArrayHW17 {
     public int remove(int index) {
         if (index < 0 || index >= cursor) {  //1.Проверить валидность индекса (что он не отрицательный и меньше курсора)
             return Integer.MIN_VALUE;                 // Индекс не валидный. Ничего в массиве не трогаем
-        } // Todo поправить обработку не корректного индекса
+        }
         int value = array[index];                      // 2.Запомнить, какое значение находилось под этим индексом
         for (int i = index; i < cursor - 1; i++) {    //3.Удалить значение из ячейки
             array[i] = array[i + 1];                   //4.Передвинуть все элементы за индексом на 1 ячейку влево
@@ -106,7 +106,7 @@ public class MagicArrayHW17 {
         if (index >= 0 && index < cursor) {
             return array[index];
         }
-        return Integer.MIN_VALUE;  //TODO поправить обработку не корректного индекса
+        return Integer.MIN_VALUE;
     }
 
     //Метод, который возвращает все значения в виде обычного массива
@@ -133,7 +133,7 @@ public class MagicArrayHW17 {
 
         if (index < 0 || index >= cursor) {               //Валидация индекса 0....cursor
             return Integer.MIN_VALUE;
-            // TODO поправить обработку не корректного  индекса
+
         }
         int oldValue = array[index];                     //Вытащить старое значение - запомнить
         array[index] = newValue;                         //Записать новое значение
