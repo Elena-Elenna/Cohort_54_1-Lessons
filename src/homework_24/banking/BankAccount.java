@@ -57,9 +57,9 @@ public class BankAccount implements PaymentSystem {
     @Override
     public String toString() {
         return "BankAccount {" +
-                "name ='" + name + '\'' +
-                ", balance =" + balance +
-                ", currency ='" + currency + '\'' +
+                "name = " + name + '\'' +
+                ", balance = " + balance +
+                ", currency = " + currency + '\'' +
                 '}';
     }
 }
