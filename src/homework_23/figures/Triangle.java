@@ -23,7 +23,6 @@ public class Triangle extends Shape{
     }
 
 
-
     private boolean isValidSides(){
         return a < b + c && b < a + c && c < a + b;
     }

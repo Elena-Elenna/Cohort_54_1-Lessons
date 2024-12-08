@@ -46,9 +46,9 @@ public class TriangleSingle extends Shape {
     @Override
     public String toString() {
         return "TriangleSingle{" +
-                "a=" + a +
-                ", b=" + b +
-                ", c=" + c +
+                "a = " + a +
+                ", b = " + b +
+                ", c = " + c +
                 '}';
     }
 

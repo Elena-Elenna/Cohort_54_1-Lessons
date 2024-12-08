@@ -46,6 +46,5 @@ public class App {
         System.out.println(triangleSingle.perimeter());
         System.out.println(triangleSingle.area());
         System.out.println(triangleSingle);
-
     }
 }
