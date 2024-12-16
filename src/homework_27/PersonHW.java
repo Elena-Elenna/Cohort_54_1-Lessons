@@ -1,12 +1,12 @@
-package lesson_27.persons;
+package homework_27;
 
-public class Person {
+public class PersonHW {
 
     private String email;
     private String password;
 
 
-    public Person( String email, String password) {
+    public PersonHW(String email, String password) {
          setEmail(email);
          setPassword(password);
     }
@@ -79,7 +79,7 @@ public class Person {
     2. Должна быть мин 1 маленькая буква ++
     3. Должна быть мин 1 большая буква ++
     4. Должна быть мин 1 цифра ++
-    4. Должен быть мин 1 спец.символ "!%$@&*()[]"  ++
+    4. Должен быть мин 1 спец.символ "! % $ @ & * () []"  ++
      ++++++++++++++++++++++++++++++++++++++++++++++++++++++
     4 переменные типа boolean  ++
      boolean isDigit = true; ++
@@ -88,13 +88,13 @@ public class Person {
      И после цикла во всех 4-х должено быть true. - тогда вернуть true
      Иначе пароль проверку не прошел - вернуть false
      */
-        //переменные для проверки условий
+        //флаги которым присвоено изначально false
         boolean isDigit = false;
         boolean isLowerCase = false;
         boolean isUpperCase = false;
         boolean isSpecialChar = false;
 
-        //Должен быть мин 1 спец.символ "!%$@&*()[]"
+        //строка, содержащая спец.символы "!%$@&*()[]"
         String specialCharacters = "! % $ @ & * () [] , . - ";
 
         // Длина >= 8
