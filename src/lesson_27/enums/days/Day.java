@@ -14,7 +14,9 @@ public enum Day {
     private int dayNumber;
 
 
-    Day(String russianName, int dayNumber) {
+
+
+        Day(String russianName, int dayNumber) {
         this.russianName = russianName;
         this.dayNumber = dayNumber;
     }
@@ -29,6 +31,7 @@ public enum Day {
         return String.format("%s - русский перевод: %s; номер дня недели: %d",
                 this.name(), this.russianName, this.dayNumber);
     }
+
 
 
     public String getRussianName() {
