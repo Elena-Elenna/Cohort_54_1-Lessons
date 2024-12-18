@@ -1,4 +1,4 @@
-package myTests.persons;
+package homework_28;
 
 import lesson_28.persons.Person;
 import org.junit.jupiter.api.Assertions;
