@@ -91,8 +91,7 @@ public class PersonTest {
                 "_test@mail.net",
                 "-t@mail.net",
                 ".est@mail.net",
-                "test+1@mail.net"
-        );
+                "test+1@mail.net");
     }
 
 }
