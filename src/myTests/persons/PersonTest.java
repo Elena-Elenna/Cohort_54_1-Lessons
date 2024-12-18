@@ -40,8 +40,6 @@ public class PersonTest {
     3. Ожидаемый результат: invalidEmail установлен не будет
     4.
      */
-
-
     @ParameterizedTest
     @MethodSource("invalidEmailData")
     void testInvalidEmailSet(String invalidEmail){
