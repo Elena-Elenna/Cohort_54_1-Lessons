@@ -1,9 +1,10 @@
 ### IntelliJ IDEA ###
 .idea/
-.Cohort_54_1.iml/
+./Cohort_54_1.iml/
 .lib/
 src/myMetods/
 .iml/
+.out/
 .out/
 !**/src/main/**/out/
 !**/src/test/**/out/
